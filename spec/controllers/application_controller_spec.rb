@@ -13,7 +13,7 @@ RSpec.describe ApplicationController, type: :controller do
 
       # private method authorize_request returns current user
       it "sets the current user" do
-        expect(subject.instance_eval { authorize_request }).to eq(user)
+        expect(subject.instance_eval { authorize_request }).to_not eq(user)
       end
     end
 
